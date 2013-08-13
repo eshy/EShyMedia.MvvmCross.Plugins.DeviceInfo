@@ -7,5 +7,6 @@
         public string HardwareVersion { get; set; }
         public string Manufacturer { get; set; }
         public string DeviceName { get; set; }
+        public string HardwareId { get; set; }
     }
 }

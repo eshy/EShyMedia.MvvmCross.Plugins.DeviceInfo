@@ -1,4 +1,5 @@
-﻿using Microsoft.Phone.Info;
+﻿using System;
+using Microsoft.Phone.Info;
 using Microsoft.Phone.Net.NetworkInformation;
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
@@ -12,9 +13,27 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
                 DeviceType = "WindowsPhone",
                 DeviceName = DeviceStatus.DeviceName,
                 HardwareVersion = DeviceStatus.DeviceHardwareVersion,
-                SoftwareVersion = System.Environment.OSVersion.Version.ToString(),
+                SoftwareVersion = Environment.OSVersion.Version.ToString(),
                 Manufacturer = DeviceStatus.DeviceManufacturer
             };
+
+            if (Environment.OSVersion.Version.Major >= 8)
+            {
+                object anid2;
+                if (UserExtendedProperties.TryGetValue("ANID2", out anid2))
+                {
+                    deviceInfo.HardwareId = anid2.ToString();
+                }
+            }
+
+            if (String.IsNullOrEmpty(deviceInfo.HardwareId))
+            {
+                object anid;
+                if (UserExtendedProperties.TryGetValue("ANID", out anid))
+                {
+                    deviceInfo.HardwareId = anid.ToString();
+                }
+            }
 
             return deviceInfo;
         }
