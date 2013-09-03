@@ -15,7 +15,8 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
                 DeviceName = Android.OS.Build.Model,
                 HardwareVersion = Android.OS.Build.Product,
                 SoftwareVersion = Android.OS.Build.VERSION.Release,
-                Manufacturer = Android.OS.Build.Manufacturer
+                Manufacturer = Android.OS.Build.Manufacturer,
+                HardwareId = Android.Provider.Settings.Secure.GetString(Context.ApplicationContext.ContentResolver, Android.Provider.Settings.Secure.AndroidId)
             };
 
             return deviceInfo;
