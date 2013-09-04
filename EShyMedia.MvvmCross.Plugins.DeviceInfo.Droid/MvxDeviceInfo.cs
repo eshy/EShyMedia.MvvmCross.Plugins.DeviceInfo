@@ -36,16 +36,25 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
                 var activeConnection = connectivityManager.ActiveNetworkInfo;
                 if ((activeConnection != null) && activeConnection.IsConnected)
                 {
-                    var mobile = connectivityManager.GetNetworkInfo(ConnectivityType.Mobile).GetState();
-                    if (mobile == NetworkInfo.State.Connected)
+                    var mobile = connectivityManager.GetNetworkInfo(ConnectivityType.Mobile);
+
+                    if (mobile != null)
                     {
-                        return NetworkStatus.ReachableViaCarrierDataNetwork;
+                        var mobileState = mobile.GetState();
+                        if (mobileState == NetworkInfo.State.Connected)
+                        {
+                            return NetworkStatus.ReachableViaCarrierDataNetwork;
+                        }
                     }
 
-                    var wifiState = connectivityManager.GetNetworkInfo(ConnectivityType.Wifi).GetState();
-                    if (wifiState == NetworkInfo.State.Connected)
+                    var wifi = connectivityManager.GetNetworkInfo(ConnectivityType.Wifi);
+                    if (wifi != null)
                     {
-                        return NetworkStatus.ReachableViaWiFiNetwork;
+                        var wifiState = wifi.GetState();
+                        if (wifiState == NetworkInfo.State.Connected)
+                        {
+                            return NetworkStatus.ReachableViaWiFiNetwork;
+                        }
                     }
                 }
 
