@@ -16,7 +16,6 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
                 SoftwareVersion = Environment.OSVersion.Version.ToString(),
                 Manufacturer = DeviceStatus.DeviceManufacturer
             };
-
             if (Environment.OSVersion.Version.Major >= 8)
             {
                 object anid2;
@@ -31,9 +30,13 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
                 object anid;
                 if (UserExtendedProperties.TryGetValue("ANID", out anid))
                 {
-                    deviceInfo.HardwareId = anid.ToString();
+                    if(anid != null) deviceInfo.HardwareId = anid.ToString();
                 }
             }
+#if DEBUG
+            if(deviceInfo.DeviceName=="XDeviceEmulator")
+                deviceInfo.HardwareId = "Emulator";
+#endif
 
             return deviceInfo;
         }
