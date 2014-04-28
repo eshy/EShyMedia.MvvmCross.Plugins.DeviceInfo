@@ -14,6 +14,7 @@ namespace Sample.Core.ViewModels
             base.Start();
 
             DeviceInfo = _deviceInfoPlugin.GetDeviceInfo();
+            var status = _deviceInfoPlugin.NetworkStatus;
         }
 
 

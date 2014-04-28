@@ -1,4 +1,6 @@
-﻿namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
+﻿using MonoTouch.UIKit;
+
+namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
 {
     public class MvxDeviceInfo : IMvxDeviceInfo
     {
@@ -6,7 +8,11 @@
         {
             var deviceInfo = new DeviceInfo
             {
-                DeviceType = "iOS"
+                DeviceType = "iOS",
+                Manufacturer = "Apple",
+                HardwareId = UIDevice.CurrentDevice.IdentifierForVendor.AsString(),//iOS 6+
+                SoftwareVersion = UIDevice.CurrentDevice.SystemVersion,
+                DeviceName = UIDevice.CurrentDevice.Model
             };
 
             return deviceInfo;

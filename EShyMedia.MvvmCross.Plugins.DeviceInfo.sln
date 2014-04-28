@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeviceInfoPlugin", "DeviceInfoPlugin", "{DB62220F-85F0-40E8-9362-F413156837CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{4343E0E6-EC15-4E15-85EB-CC47ADF85C6D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShyMedia.MvvmCross.Plugins.DeviceInfo", "EShyMedia.MvvmCross.Plugins.DeviceInfo\EShyMedia.MvvmCross.Plugins.DeviceInfo.csproj", "{9D5C6732-ADAE-4676-86F0-379899A867FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid", "EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid\EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid.csproj", "{36228B32-A08B-477B-9320-EC5EA5DF05A3}"
@@ -10,10 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone", "EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone.csproj", "{64C85398-A083-4132-96F2-C703948262EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore", "EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore.csproj", "{4413E9E5-7A45-41CD-BEF8-0DFB3FB11C6B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeviceInfoPlugin", "DeviceInfoPlugin", "{DB62220F-85F0-40E8-9362-F413156837CF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{4343E0E6-EC15-4E15-85EB-CC47ADF85C6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Core", "Sample.Core\Sample.Core.csproj", "{85E7C710-D317-4E2B-8A80-B9C6FDCE495D}"
 EndProject
@@ -90,6 +92,7 @@ Global
 		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|ARM.ActiveCfg = Release|Any CPU
 		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|iPhone.Build.0 = Release|Any CPU
 		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9D5C6732-ADAE-4676-86F0-379899A867FF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
@@ -164,6 +167,7 @@ Global
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|ARM.ActiveCfg = Release|Any CPU
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|iPhone.Build.0 = Release|Any CPU
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87}.Release|Mixed Platforms.Build.0 = Release|Any CPU
@@ -461,6 +465,7 @@ Global
 		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|iPhone.Build.0 = Debug|iPhone
+		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{67895C5F-62E7-44AE-907D-E031BE608748}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
@@ -482,11 +487,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{9D5C6732-ADAE-4676-86F0-379899A867FF} = {DB62220F-85F0-40E8-9362-F413156837CF}
 		{36228B32-A08B-477B-9320-EC5EA5DF05A3} = {DB62220F-85F0-40E8-9362-F413156837CF}
 		{66002805-EBCE-4B07-A0B3-9BE19927FF87} = {DB62220F-85F0-40E8-9362-F413156837CF}
 		{64C85398-A083-4132-96F2-C703948262EF} = {DB62220F-85F0-40E8-9362-F413156837CF}
 		{4413E9E5-7A45-41CD-BEF8-0DFB3FB11C6B} = {DB62220F-85F0-40E8-9362-F413156837CF}
-		{9D5C6732-ADAE-4676-86F0-379899A867FF} = {DB62220F-85F0-40E8-9362-F413156837CF}
 		{85E7C710-D317-4E2B-8A80-B9C6FDCE495D} = {4343E0E6-EC15-4E15-85EB-CC47ADF85C6D}
 		{782106C3-3C18-4279-9F9A-AD2946E40EA5} = {4343E0E6-EC15-4E15-85EB-CC47ADF85C6D}
 		{F66166D5-7E86-4753-B00D-D6C20896CEE8} = {4343E0E6-EC15-4E15-85EB-CC47ADF85C6D}
