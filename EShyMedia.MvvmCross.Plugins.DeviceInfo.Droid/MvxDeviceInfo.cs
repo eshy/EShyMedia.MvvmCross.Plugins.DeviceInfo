@@ -1,4 +1,5 @@
 using Android.Content;
+using Android.Content.Res;
 using Android.Net;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Droid;
@@ -19,6 +20,9 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
                 HardwareId = Android.Provider.Settings.Secure.GetString(Context.ApplicationContext.ContentResolver, Android.Provider.Settings.Secure.AndroidId)
             };
 
+             var d = Resources.System.DisplayMetrics;
+            deviceInfo.ScreenWidth = (int) (d.WidthPixels/d.Density);
+            deviceInfo.ScreenHeight = (int)(d.HeightPixels / d.Density);
             return deviceInfo;
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using Microsoft.Phone.Info;
 using Microsoft.Phone.Net.NetworkInformation;
 
@@ -41,6 +42,24 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
                 deviceInfo.HardwareId = "Emulator";
 #endif
 
+            var instance = Application.Current.Host.Content;
+            var getMethod = instance.GetType().GetProperty("ScaleFactor").GetGetMethod();
+            var value = (int)getMethod.Invoke(instance, null);
+            
+            deviceInfo.ScreenWidth = 480;
+            deviceInfo.ScreenHeight = 800;
+
+            switch (value)
+            {
+                case 150:
+                    deviceInfo.ScreenWidth = 720;
+                    deviceInfo.ScreenHeight = 1280;
+                    break;
+                case 160:
+                    deviceInfo.ScreenWidth = 768;
+                    deviceInfo.ScreenHeight = 1280;
+                    break;
+            }
             return deviceInfo;
         }
 

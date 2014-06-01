@@ -12,9 +12,11 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
                 Manufacturer = "Apple",
                 HardwareId = UIDevice.CurrentDevice.IdentifierForVendor.AsString(),//iOS 6+
                 SoftwareVersion = UIDevice.CurrentDevice.SystemVersion,
-                DeviceName = UIDevice.CurrentDevice.Model
+                DeviceName = UIDevice.CurrentDevice.Model,
             };
-
+            var screen = UIScreen.MainScreen.Bounds;
+            deviceInfo.ScreenWidth = (int) screen.Width;
+            deviceInfo.ScreenHeight = (int)screen.Height;
             return deviceInfo;
         }
 

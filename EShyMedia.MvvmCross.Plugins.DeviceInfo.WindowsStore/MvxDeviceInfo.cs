@@ -1,6 +1,7 @@
 ﻿using System;
 using Windows.Networking.Connectivity;
 using Windows.System.Profile;
+using Windows.UI.Xaml;
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore
 {
@@ -13,10 +14,13 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore
                 DeviceType = "WindowsStore",
                 //DeviceName = DeviceStatus.DeviceName,
                 //HardwareVersion = DeviceStatus.DeviceHardwareVersion,
-                SoftwareVersion = "8.0",//Hardcoded since there's no way to get this info in metro apps
+                SoftwareVersion = "8.0",//TODO: check if 8.1 introduced a way to get this info
                 //Manufacturer = DeviceStatus.DeviceManufacturer
-                HardwareId = GetHardwareId()
+                HardwareId = GetHardwareId(),
+                ScreenWidth =  Convert.ToInt32(Window.Current.Bounds.Width),
+                ScreenHeight = Convert.ToInt32(Window.Current.Bounds.Height)
             };
+
             return deviceInfo;
         }
 
