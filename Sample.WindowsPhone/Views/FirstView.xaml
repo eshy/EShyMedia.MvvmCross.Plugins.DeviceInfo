@@ -36,6 +36,7 @@
                 <TextBlock Text="{Binding DeviceInfo.Manufacturer}" />
                 <TextBlock Text="{Binding DeviceInfo.DeviceName}" />
                 <TextBlock Text="{Binding DeviceInfo.HardwareId}" />
+                <TextBlock Text="{Binding Status}" />
             </StackPanel>
         </Grid>
     </Grid>
