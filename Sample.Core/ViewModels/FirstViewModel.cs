@@ -8,13 +8,14 @@ namespace Sample.Core.ViewModels
         : MvxViewModel
     {
         private readonly IMvxDeviceInfo _deviceInfoPlugin;
+        private NetworkStatus _status;
 
         public override void Start()
         {
             base.Start();
 
             DeviceInfo = _deviceInfoPlugin.GetDeviceInfo();
-            var status = _deviceInfoPlugin.NetworkStatus;
+            Status = _deviceInfoPlugin.NetworkStatus;
         }
 
 
@@ -30,5 +31,10 @@ namespace Sample.Core.ViewModels
             set { _deviceInfo = value; RaisePropertyChanged(() => DeviceInfo); }
         }
 
+        public NetworkStatus Status
+        {
+            get { return _status; }
+            private set { _status = value; RaisePropertyChanged(() => Status); }
+        }
     }
 }
