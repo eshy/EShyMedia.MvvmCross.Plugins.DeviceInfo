@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>EShyMedia.MvvmCross.Plugins.DeviceInfo</id>
-        <version>1.0.0</version>
+        <version>3.5.0-beta2</version>
         <title>EShyMedia.MvvmCross.Plugins.DeviceInfo</title>
         <authors>Ishai Hachlili</authors>
         <owners>Ishai Hachlili</owners>
@@ -11,12 +11,12 @@
         <description>An MvvmCross plugin to get device info including hardware Id</description>
         <tags>MvvmCross</tags>
         <dependencies>
-            <dependency id="MvvmCross.HotTuna.CrossCore" version="3.1.1" />
+            <dependency id="MvvmCross.HotTuna.CrossCore" version="3.5.0-beta2" />
         </dependencies>
     </metadata>
     <files>
 		<!-- PCL -->
-        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\portable-win+net45+wp8+MonoAndroid+MonoTouch\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
+        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid+Xamarin.iOS\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
 
 		<!-- store -->
         <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\netcore45\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
@@ -34,8 +34,8 @@
         <file src="BootstrapContent\DeviceInfoPluginBootstrap.cs.pp" target="content\MonoAndroid\Bootstrap\DeviceInfoPluginBootstrap.cs.pp" />
 
 		<!-- touch -->
-        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\MonoTouch\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
-        <file src="..\Release\Mvx\Touch\EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch.dll" target="lib\MonoTouch\EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch.dll" />
-        <file src="TouchBootstrapContent\DeviceInfoPluginBootstrap.cs.pp" target="content\MonoTouch\Bootstrap\DeviceInfoPluginBootstrap.cs.pp" />
+        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\Xamarin.iOS\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
+        <file src="..\Release\Mvx\Touch\EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch.dll" target="lib\Xamarin.iOS\EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch.dll" />
+        <file src="TouchBootstrapContent\DeviceInfoPluginBootstrap.cs.pp" target="content\Xamarin.iOS\Bootstrap\DeviceInfoPluginBootstrap.cs.pp" />
     </files>
 </package>

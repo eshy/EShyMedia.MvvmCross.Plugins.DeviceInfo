@@ -1,12 +1,12 @@
-using System.Drawing;
+using CoreGraphics;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using UIKit;
+using Foundation;
 
 namespace Sample.iOS.Views
 {
-    [Register("FirstView")]
+    [Foundation.Register("FirstView")]
     public class FirstView : MvxViewController
     {
         public override void ViewDidLoad()
@@ -14,19 +14,19 @@ namespace Sample.iOS.Views
             View = new UIView(){ BackgroundColor = UIColor.White};
             base.ViewDidLoad();
 
-            var label = new UILabel(new RectangleF(10, 10, 300, 40));
+            var label = new UILabel(new CGRect(10, 10, 300, 40));
             Add(label);
 
-            var label2 = new UILabel(new RectangleF(10, 50, 300, 40));
+            var label2 = new UILabel(new CGRect(10, 50, 300, 40));
             Add(label2);
 
-            var label3 = new UILabel(new RectangleF(10, 90, 300, 40));
+            var label3 = new UILabel(new CGRect(10, 90, 300, 40));
             Add(label3);
 
-            var label4 = new UILabel(new RectangleF(10, 130, 300, 40));
+            var label4 = new UILabel(new CGRect(10, 130, 300, 40));
             Add(label4);
 
-            var label5 = new UILabel(new RectangleF(10, 170, 300, 40));
+            var label5 = new UILabel(new CGRect(10, 170, 300, 40));
             Add(label5);
 
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();

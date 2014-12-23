@@ -1,4 +1,4 @@
-﻿using Cirrious.CrossCore;
+using Cirrious.CrossCore;
 using Cirrious.CrossCore.Plugins;
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
