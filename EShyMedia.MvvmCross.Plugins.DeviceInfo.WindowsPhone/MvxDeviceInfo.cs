@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows;
+using Microsoft.Devices;
 using Microsoft.Phone.Info;
 using Microsoft.Phone.Net.NetworkInformation;
+using Environment = System.Environment;
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
 {
@@ -67,6 +69,9 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
         {
             get
             {
+                if (DeviceNetworkInformation.IsNetworkAvailable && Microsoft.Devices.Environment.DeviceType == DeviceType.Emulator)
+                    return NetworkStatus.ReachableViaWiFiNetwork;
+                
                 if (DeviceNetworkInformation.IsWiFiEnabled)
                     return NetworkStatus.ReachableViaWiFiNetwork;
 
@@ -74,7 +79,6 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
                     return NetworkStatus.ReachableViaCarrierDataNetwork;
 
                 return NetworkStatus.NotReachable;
-
             }
         }
     }
