@@ -2,13 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>EShyMedia.MvvmCross.Plugins.DeviceInfo</id>
-        <version>1.5.0</version>
+        <version>1.6.0-beta1</version>
         <title>EShyMedia.MvvmCross.Plugins.DeviceInfo</title>
         <authors>Ishai Hachlili</authors>
         <owners>Ishai Hachlili</owners>
         <projectUrl>https://github.com/eshy/EShyMedia.MvvmCross.Plugins.DeviceInfo</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>An MvvmCross plugin to get device info including hardware Id</description>
+		<releaseNotes>
+		1.6 - Added support for Windows Universal/Windows Phone 8.1 XAML Apps 
+		</releaseNotes>
         <tags>MvvmCross</tags>
         <dependencies>
             <dependency id="MvvmCross.HotTuna.CrossCore" version="3.5.0" />
@@ -22,6 +25,18 @@
         <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\netcore45\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
         <file src="..\Release\Mvx\WindowsStore\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore.dll" target="lib\netcore45\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore.dll" />
         <file src="BootstrapContent\DeviceInfoPluginBootstrap.cs.pp" target="content\netcore45\Bootstrap\DeviceInfoPluginBootstrap.cs.pp" />
+
+		<!-- windows common -->
+        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\win81\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
+        <file src="..\Release\Mvx\WindowsCommon\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon.dll" target="lib\win81\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon.dll" />
+        <file src="BootstrapContent\DeviceInfoPluginBootstrap.cs.pp" target="content\win81\Bootstrap\DeviceInfoPluginBootstrap.cs.pp" />
+
+        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\wpa81\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
+        <file src="..\Release\Mvx\WindowsCommon\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon.dll" target="lib\wpa81\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon.dll" />
+        <file src="BootstrapContent\DeviceInfoPluginBootstrap.cs.pp" target="content\wpa81\Bootstrap\DeviceInfoPluginBootstrap.cs.pp" />
+
+        <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\portable-win81+wpa81\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />
+        <file src="..\Release\Mvx\WindowsCommon\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon.dll" target="lib\portable-win81+wpa81\EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon.dll" />
 
 		<!-- phone -->
         <file src="..\Release\Mvx\Portable\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" target="lib\wp8\EShyMedia.MvvmCross.Plugins.DeviceInfo.dll" />

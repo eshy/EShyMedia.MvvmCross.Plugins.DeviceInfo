@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using Windows.Networking.Connectivity;
 using Windows.Security.ExchangeActiveSyncProvisioning;
+using Windows.Storage.Streams;
 using Windows.System.Profile;
 using Windows.UI.Xaml;
 
-namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore
+namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
 {
     public class MvxDeviceInfo : IMvxDeviceInfo
     {
@@ -15,11 +16,12 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore
             var friendly = clientDeviceInfo.FriendlyName;
             var manufacturer = clientDeviceInfo.SystemManufacturer;
             var product = clientDeviceInfo.SystemProductName;
+
             var deviceInfo = new DeviceInfo
             {
                 DeviceType = os,
                 DeviceName = friendly,
-                SoftwareVersion = "8.0",//TODO: check if 8.1 introduced a way to get this info
+                SoftwareVersion = "8.1",//TODO: check if 10 introduced a way to get this info
                 Manufacturer = manufacturer,
                 HardwareVersion = product,
                 HardwareId = GetHardwareId(),
@@ -44,7 +46,7 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsStore
         {
             var token = HardwareIdentification.GetPackageSpecificToken(null);
             var hardwareId = token.Id;
-            var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+            var dataReader = DataReader.FromBuffer(hardwareId);
 
             var bytes = new byte[hardwareId.Length];
             dataReader.ReadBytes(bytes);
