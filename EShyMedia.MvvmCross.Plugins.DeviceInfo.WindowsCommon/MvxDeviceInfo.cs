@@ -9,6 +9,7 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
 {
     public class MvxDeviceInfo : IMvxDeviceInfo
     {
+
         public DeviceInfo GetDeviceInfo()
         {
             var clientDeviceInfo = new EasClientDeviceInformation();
@@ -52,6 +53,7 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
             dataReader.ReadBytes(bytes);
 
             return BitConverter.ToString(bytes);
-        } 
+        }
+
     }
 }

@@ -1,7 +1,7 @@
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsPhone.Platform;
 using Microsoft.Phone.Controls;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Platform;
+using MvvmCross.WindowsPhone.Platform;
 
 namespace Sample.WindowsPhone
 {

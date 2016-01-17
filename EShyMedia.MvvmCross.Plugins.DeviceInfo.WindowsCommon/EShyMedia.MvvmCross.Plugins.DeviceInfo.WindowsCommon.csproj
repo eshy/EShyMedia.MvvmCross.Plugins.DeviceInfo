@@ -55,14 +55,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\portable-win81+wpa81\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.0.0-beta8\lib\portable-win81+wpa81\MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.CrossCore.WindowsCommon">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\portable-win81+wpa81\Cirrious.CrossCore.WindowsCommon.dll</HintPath>
+    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.0.0-beta8\lib\portable-win81+wpa81\MvvmCross.Platform.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\portable-win81+wpa81\Cirrious.MvvmCross.Localization.dll</HintPath>
+    <Reference Include="MvvmCross.Platform.WindowsCommon, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.0.0-beta8\lib\portable-win81+wpa81\MvvmCross.Platform.WindowsCommon.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

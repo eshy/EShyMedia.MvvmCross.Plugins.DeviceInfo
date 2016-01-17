@@ -1,6 +1,5 @@
-using System;
-using Cirrious.MvvmCross.ViewModels;
 using EShyMedia.MvvmCross.Plugins.DeviceInfo;
+using MvvmCross.Core.ViewModels;
 
 namespace Sample.Core.ViewModels
 {

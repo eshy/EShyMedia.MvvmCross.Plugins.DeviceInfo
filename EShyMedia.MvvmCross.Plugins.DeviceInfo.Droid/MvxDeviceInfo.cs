@@ -1,8 +1,8 @@
-using Android.Content;
 using Android.Content.Res;
 using Android.Net;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Droid;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Droid;
+
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
 {
@@ -26,8 +26,8 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
             return deviceInfo;
         }
 
-        private Context _context;
-        private Context Context
+        private Android.Content.Context _context;
+        private Android.Content.Context Context
         {
             get { return _context ?? (_context = Mvx.Resolve<IMvxAndroidGlobals>().ApplicationContext); }
         }
@@ -36,7 +36,7 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
         {
             get
             {
-                var connectivityManager = (ConnectivityManager) Context.GetSystemService(Context.ConnectivityService);
+                var connectivityManager = (ConnectivityManager) Context.GetSystemService(Android.Content.Context.ConnectivityService);
                 var activeConnection = connectivityManager.ActiveNetworkInfo;
                 if ((activeConnection != null) && activeConnection.IsConnected)
                 {

@@ -94,7 +94,7 @@ namespace Sample.WinPhone81
                 var setup = new Setup(rootFrame);
                 setup.Initialize();
 
-                var start = Cirrious.CrossCore.Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>();
+                var start = MvvmCross.Platform.Mvx.Resolve<MvvmCross.Core.ViewModels.IMvxAppStart>();
                 start.Start();
             }
 

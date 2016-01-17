@@ -1,6 +1,5 @@
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Plugins;
-using Cirrious.CrossCore.UI;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Plugins;
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
 {

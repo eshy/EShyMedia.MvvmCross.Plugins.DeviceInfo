@@ -1,6 +1,6 @@
-using Cirrious.CrossCore.Plugins;
+using MvvmCross.Platform.Plugins;
 
-namespace Sample.Android.Bootstrap
+namespace Sample.Droid.Bootstrap
 {
     public class DeviceInfoPluginBootstrap
         : MvxPluginBootstrapAction<EShyMedia.MvvmCross.Plugins.DeviceInfo.PluginLoader>
