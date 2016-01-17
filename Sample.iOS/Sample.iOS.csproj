@@ -104,9 +104,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch\EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch.csproj">
+    <ProjectReference Include="..\EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS\EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS.csproj">
       <Project>{66002805-ebce-4b07-a0b3-9be19927ff87}</Project>
-      <Name>EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch</Name>
+      <Name>EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\EShyMedia.MvvmCross.Plugins.DeviceInfo\EShyMedia.MvvmCross.Plugins.DeviceInfo.csproj">
       <Project>{9d5c6732-adae-4676-86f0-379899a867ff}</Project>

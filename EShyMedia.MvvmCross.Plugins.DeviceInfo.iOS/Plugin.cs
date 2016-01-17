@@ -1,7 +1,7 @@
 using MvvmCross.Platform;
 using MvvmCross.Platform.Plugins;
 
-namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
+namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS
 {
     public class Plugin
         : IMvxPlugin

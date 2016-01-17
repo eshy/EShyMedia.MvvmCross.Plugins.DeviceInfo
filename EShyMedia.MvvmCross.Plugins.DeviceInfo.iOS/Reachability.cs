@@ -3,7 +3,7 @@ using System.Net;
 using CoreFoundation;
 using SystemConfiguration;
 
-namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
+namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS
 {
     public static class Reachability
     {

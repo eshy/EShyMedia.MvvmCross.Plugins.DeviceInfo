@@ -8,8 +8,8 @@
     <ProjectGuid>{66002805-EBCE-4B07-A0B3-9BE19927FF87}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch</RootNamespace>
-    <AssemblyName>EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch</AssemblyName>
+    <RootNamespace>EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS</RootNamespace>
+    <AssemblyName>EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS</AssemblyName>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -31,7 +31,7 @@
     <NoStdLib>True</NoStdLib>
     <DebugType>none</DebugType>
     <Optimize>False</Optimize>
-    <OutputPath>..\Release\Mvx\Touch\</OutputPath>
+    <OutputPath>..\Release\Mvx\iOS\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>

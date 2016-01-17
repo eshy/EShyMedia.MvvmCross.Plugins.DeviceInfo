@@ -1,6 +1,6 @@
 using UIKit;
 
-namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Touch
+namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS
 {
     public class MvxDeviceInfo : IMvxDeviceInfo
     {
