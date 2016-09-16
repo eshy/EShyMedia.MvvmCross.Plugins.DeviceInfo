@@ -1,0 +1,73 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETPortable,Version=v4.5,Profile=Profile259": {
+      "MvvmCross.Platform/4.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MvvmCross.Platform/4.2.3": {
+      "sha512": "1YlqrwbJTvNi43/vN2IbB9yRz9RwJeS9VCOyMmq4z7yaIpvq5xxWR3tBD0CR/Qy/ztUXa7kqNd3PG0I7tbKxQA==",
+      "type": "package",
+      "path": "MvvmCross.Platform/4.2.3",
+      "files": [
+        "MvvmCross.Platform.4.2.3.nupkg.sha512",
+        "MvvmCross.Platform.nuspec",
+        "lib/MonoAndroid/MvvmCross.Platform.Droid.dll",
+        "lib/MonoAndroid/MvvmCross.Platform.dll",
+        "lib/MonoAndroid/MvvmCross.Platform.dll.mdb",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.Mac.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.Mac.dll.mdb",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.dll.mdb",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.dll.mdb",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll.mdb",
+        "lib/dotnet/MvvmCross.Platform.dll",
+        "lib/dotnet/MvvmCross.Platform.dll.mdb",
+        "lib/net45/MvvmCross.Platform.Wpf.dll",
+        "lib/net45/MvvmCross.Platform.dll",
+        "lib/net45/MvvmCross.Platform.dll.mdb",
+        "lib/netcore45/MvvmCross.Platform.WindowsStore.dll",
+        "lib/netcore45/MvvmCross.Platform.WindowsStore.pri",
+        "lib/netcore45/MvvmCross.Platform.dll",
+        "lib/netcore45/MvvmCross.Platform.dll.mdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.dll.mdb",
+        "lib/portable-win81+wpa81/MvvmCross.Platform.WindowsCommon.dll",
+        "lib/portable-win81+wpa81/MvvmCross.Platform.WindowsCommon.pri",
+        "lib/portable-win81+wpa81/MvvmCross.Platform.dll",
+        "lib/portable-win81+wpa81/MvvmCross.Platform.dll.mdb",
+        "lib/win81/MvvmCross.Platform.WindowsCommon.dll",
+        "lib/win81/MvvmCross.Platform.WindowsCommon.pri",
+        "lib/win81/MvvmCross.Platform.dll",
+        "lib/win81/MvvmCross.Platform.dll.mdb",
+        "lib/wp8/MvvmCross.Platform.WindowsPhone.dll",
+        "lib/wp8/MvvmCross.Platform.dll",
+        "lib/wp8/MvvmCross.Platform.dll.mdb",
+        "lib/wpa81/MvvmCross.Platform.WindowsCommon.dll",
+        "lib/wpa81/MvvmCross.Platform.WindowsCommon.pri",
+        "lib/wpa81/MvvmCross.Platform.dll",
+        "lib/wpa81/MvvmCross.Platform.dll.mdb"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "MvvmCross.Platform >= 4.2.3"
+    ],
+    ".NETPortable,Version=v4.5,Profile=Profile259": []
+  },
+  "tools": {},
+  "projectFileToolGroups": {}
+}
