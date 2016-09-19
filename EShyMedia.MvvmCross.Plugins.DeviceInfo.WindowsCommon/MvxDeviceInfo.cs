@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Reflection;
+using Windows.Graphics.Display;
 using Windows.Networking.Connectivity;
 using Windows.Security.ExchangeActiveSyncProvisioning;
 using Windows.Storage.Streams;
@@ -15,21 +16,30 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
         public DeviceInfo GetDeviceInfo()
         {
             var clientDeviceInfo = new EasClientDeviceInformation();
+            var id = clientDeviceInfo.Id.ToString();
             var os = clientDeviceInfo.OperatingSystem;
             var friendly = clientDeviceInfo.FriendlyName;
             var manufacturer = clientDeviceInfo.SystemManufacturer;
             var product = clientDeviceInfo.SystemProductName;
+            var scaleFactor = 1.0;
 
+            var resolutionScale = DisplayInformation.GetForCurrentView().ResolutionScale;
+            if (resolutionScale != ResolutionScale.Invalid)
+            {
+                scaleFactor = (double)(int)resolutionScale / 100;
+
+            }
             var deviceInfo = new DeviceInfo
             {
+                DeviceId = id,
                 DeviceType = os,
                 DeviceName = friendly,
-                SoftwareVersion = GetUWPVersion(),
+                SoftwareVersion = GetOSVersion(),
                 Manufacturer = manufacturer,
                 HardwareVersion = product,
                 HardwareId = GetHardwareId(),
-                ScreenWidth =  Convert.ToInt32(Window.Current.Bounds.Width),
-                ScreenHeight = Convert.ToInt32(Window.Current.Bounds.Height)
+                ScreenWidth =  Convert.ToInt32(Window.Current.Bounds.Width*scaleFactor),
+                ScreenHeight = Convert.ToInt32(Window.Current.Bounds.Height*scaleFactor)
             };
 
             return deviceInfo;
@@ -53,15 +63,14 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
 
             var bytes = new byte[hardwareId.Length];
             dataReader.ReadBytes(bytes);
-
-            return BitConverter.ToString(bytes);
+            return Convert.ToBase64String(bytes);
         }
 
         /// <summary>
-        /// Use reflection to get UWP version if running on Win10, return "8.1" if not
+        /// Use reflection to get OS version if running on Win10, return "8.1" if not
         /// </summary>
         /// <returns></returns>
-        private string GetUWPVersion()
+        private string GetOSVersion()
         {
             var analyticsInfoType = Type.GetType(
               "Windows.System.Profile.AnalyticsInfo, Windows, ContentType=WindowsRuntime");

@@ -31,7 +31,7 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsPhone
                 }
             }
 
-            if (String.IsNullOrEmpty(deviceInfo.HardwareId))
+            if (string.IsNullOrEmpty(deviceInfo.HardwareId))
             {
                 object anid;
                 if (UserExtendedProperties.TryGetValue("ANID", out anid))

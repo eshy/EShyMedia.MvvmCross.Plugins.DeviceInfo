@@ -16,17 +16,10 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.iOS
             };
             var screen = UIScreen.MainScreen.Bounds;
             deviceInfo.ScreenWidth = (int) screen.Width;
-            deviceInfo.ScreenHeight = (int)screen.Height;
+            deviceInfo.ScreenHeight = (int) screen.Height;
             return deviceInfo;
         }
 
-        public NetworkStatus NetworkStatus
-        {
-            get
-            {
-                return Reachability.InternetConnectionStatus();
-            }
-            
-        }
+        public NetworkStatus NetworkStatus => Reachability.InternetConnectionStatus();
     }
 }

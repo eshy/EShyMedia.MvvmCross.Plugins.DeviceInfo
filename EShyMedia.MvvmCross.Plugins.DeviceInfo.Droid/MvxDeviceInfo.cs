@@ -27,10 +27,7 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.Droid
         }
 
         private Android.Content.Context _context;
-        private Android.Content.Context Context
-        {
-            get { return _context ?? (_context = Mvx.Resolve<IMvxAndroidGlobals>().ApplicationContext); }
-        }
+        private Android.Content.Context Context => _context ?? (_context = Mvx.Resolve<IMvxAndroidGlobals>().ApplicationContext);
 
         public NetworkStatus NetworkStatus
         {

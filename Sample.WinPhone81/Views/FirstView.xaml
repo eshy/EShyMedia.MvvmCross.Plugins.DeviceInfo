@@ -8,14 +8,17 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-		   <StackPanel>
-                <TextBlock Text="{Binding DeviceInfo.DeviceType}" />
-                <TextBlock Text="{Binding DeviceInfo.SoftwareVersion}" />
-                <TextBlock Text="{Binding DeviceInfo.HardwareVersion}" />
-                <TextBlock Text="{Binding DeviceInfo.Manufacturer}" />
-                <TextBlock Text="{Binding DeviceInfo.DeviceName}" />
-                <TextBlock Text="{Binding DeviceInfo.HardwareId}" />
-                <TextBlock Text="{Binding Status}" />
-            </StackPanel>
+        <StackPanel>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.DeviceType}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.SoftwareVersion}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.HardwareVersion}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.Manufacturer}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.DeviceName}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.HardwareId}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.DeviceId}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.ScreenWidth}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding DeviceInfo.ScreenHeight}" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding Status}" />
+        </StackPanel>
     </Grid>
 </views:MvxWindowsPage>

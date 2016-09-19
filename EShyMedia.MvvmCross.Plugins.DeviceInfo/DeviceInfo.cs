@@ -7,6 +7,7 @@
         public string HardwareVersion { get; set; }
         public string Manufacturer { get; set; }
         public string DeviceName { get; set; }
+        public string DeviceId { get; set; }
         public string HardwareId { get; set; }
         public int ScreenWidth { get; set; }
         public int ScreenHeight { get; set; }
