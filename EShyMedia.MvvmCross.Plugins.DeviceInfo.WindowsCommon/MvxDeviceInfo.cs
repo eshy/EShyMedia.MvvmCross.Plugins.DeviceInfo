@@ -7,6 +7,7 @@ using Windows.Security.ExchangeActiveSyncProvisioning;
 using Windows.Storage.Streams;
 using Windows.System.Profile;
 using Windows.UI.Xaml;
+using MvvmCross.Platform;
 
 namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
 {
@@ -16,7 +17,17 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
         public DeviceInfo GetDeviceInfo()
         {
             var clientDeviceInfo = new EasClientDeviceInformation();
-            var id = clientDeviceInfo.Id.ToString();
+            var hardwareId = GetHardwareId();
+            string id;
+            try
+            {
+                id = clientDeviceInfo.Id.ToString();
+            }catch (Exception ex)
+            {
+                Mvx.TaggedWarning(nameof(MvxDeviceInfo), "Couldn't get Id {0}", ex);
+                id = hardwareId;
+            }
+
             var os = clientDeviceInfo.OperatingSystem;
             var friendly = clientDeviceInfo.FriendlyName;
             var manufacturer = clientDeviceInfo.SystemManufacturer;
@@ -33,11 +44,11 @@ namespace EShyMedia.MvvmCross.Plugins.DeviceInfo.WindowsCommon
             {
                 DeviceId = id,
                 DeviceType = os,
-                DeviceName = friendly,
+                DeviceName = friendly,//TODO: this should be product to be consistent with WP8 Silverlight, friendly can be a new field
                 SoftwareVersion = GetOSVersion(),
                 Manufacturer = manufacturer,
                 HardwareVersion = product,
-                HardwareId = GetHardwareId(),
+                HardwareId = hardwareId,
                 ScreenWidth =  Convert.ToInt32(Window.Current.Bounds.Width*scaleFactor),
                 ScreenHeight = Convert.ToInt32(Window.Current.Bounds.Height*scaleFactor)
             };

@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     ".NETPortable,Version=v4.5,Profile=Profile259": {
-      "MvvmCross.Platform/4.2.3": {
+      "MvvmCross.Platform/4.3.0": {
         "type": "package",
         "compile": {
           "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.dll": {}
@@ -15,12 +15,12 @@
     }
   },
   "libraries": {
-    "MvvmCross.Platform/4.2.3": {
-      "sha512": "1YlqrwbJTvNi43/vN2IbB9yRz9RwJeS9VCOyMmq4z7yaIpvq5xxWR3tBD0CR/Qy/ztUXa7kqNd3PG0I7tbKxQA==",
+    "MvvmCross.Platform/4.3.0": {
+      "sha512": "sXFi2TSj94NSZQTGwaNozVjFIcMQk6h1jQkdgLw1P1nxEPyu7I7tgtiFIoGsvbX17fsAjd/9+ffl9Pj9X/C5Yw==",
       "type": "package",
-      "path": "MvvmCross.Platform/4.2.3",
+      "path": "MvvmCross.Platform/4.3.0",
       "files": [
-        "MvvmCross.Platform.4.2.3.nupkg.sha512",
+        "MvvmCross.Platform.4.3.0.nupkg.sha512",
         "MvvmCross.Platform.nuspec",
         "lib/MonoAndroid/MvvmCross.Platform.Droid.dll",
         "lib/MonoAndroid/MvvmCross.Platform.dll",
@@ -64,7 +64,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "MvvmCross.Platform >= 4.2.3"
+      "MvvmCross.Platform >= 4.3.0"
     ],
     ".NETPortable,Version=v4.5,Profile=Profile259": []
   },
